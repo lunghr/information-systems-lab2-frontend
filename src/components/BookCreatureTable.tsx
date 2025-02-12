@@ -26,6 +26,14 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { IconButton as JoyIconButton } from "@mui/joy";
 import Option from "@mui/joy/Option";
 
+export interface Ring {
+  name: string;
+}
+
+export interface CreatureLocation {
+  name: string;
+}
+
 export interface BookCreatureDTO {
   name: string;
   coordinates: {
@@ -36,6 +44,8 @@ export interface BookCreatureDTO {
   age: number;
   creatureType: string;
   ringId: number;
+  ring: Ring;
+  creatureLocation: CreatureLocation;
   creatureLocationId: number;
   attackLevel: number;
 }
@@ -385,7 +395,7 @@ const BookCreatureTable = () => {
     return () => {
       socket.close();
     };
-  }, []);
+  }, [authStore.getToken]);
 
   const filtered = creatures.filter((c) =>
     c.name.toLowerCase().includes(search.toLowerCase())
@@ -493,7 +503,7 @@ const BookCreatureTable = () => {
                 }
               );
 
-              const name = response.data.name;
+              console.log(response)
 
               setSnackbarError(false);
               setSnackbarMessage(`Кольцо уничтожено`);

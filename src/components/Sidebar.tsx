@@ -226,7 +226,7 @@ const Sidebar = observer(() => {
             mb: 2,
           }}
         >
-          <Link to="https://github.com/lunghr/information-systems-lab1-frontend">
+          <Link to="https://github.com/lunghr/information-systems-lab2-frontend">
             <ListItem>
               <ListItemButton>
                 <GitHub />
@@ -234,7 +234,7 @@ const Sidebar = observer(() => {
               </ListItemButton>
             </ListItem>
           </Link>
-          <Link to="https://github.com/lunghr/information-systems-lab1-backend">
+          <Link to="https://github.com/lunghr/information-systems-lab2-backend">
             <ListItem>
               <ListItemButton>
                 <GitHub />

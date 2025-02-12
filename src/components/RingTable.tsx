@@ -13,7 +13,7 @@ import ModalDialog from "@mui/joy/ModalDialog";
 import ModalClose from "@mui/joy/ModalClose";
 import Button from "@mui/joy/Button";
 import Snackbar from "@mui/joy/Snackbar";
-import { IconButton, iconButtonClasses, Typography } from "@mui/joy";
+import { IconButton, Typography } from "@mui/joy";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import EditIcon from "@mui/icons-material/Edit";
@@ -293,7 +293,7 @@ const RingsTable = () => {
     return () => {
       socket.close();
     };
-  }, []);
+  }, [authStore.getToken]);
 
   return (
     <Box

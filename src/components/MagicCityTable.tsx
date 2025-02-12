@@ -431,7 +431,7 @@ const MagicCityTable = () => {
     return () => {
       socket.close();
     };
-  }, []);
+  }, [authStore.getToken]);
 
   const filteredCities = cities.filter((c) =>
     c.name.toLowerCase().includes(search.toLowerCase())

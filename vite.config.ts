@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     UnoCSS()
   ],
-  base: '/information-systems-lab1-frontend/'
+  base: '/information-systems-lab2-frontend/'
 })
