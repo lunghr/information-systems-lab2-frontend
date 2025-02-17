@@ -9,6 +9,7 @@ import ListItemContent from "@mui/joy/ListItemContent";
 import Typography from "@mui/joy/Typography";
 import Sheet from "@mui/joy/Sheet";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
+import FileIcon from "@mui/icons-material/FilePresent";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import LogoutRoundedIcon from "@mui/icons-material/LogoutRounded";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -152,6 +153,17 @@ const Sidebar = observer(() => {
                 <HomeRoundedIcon />
                 <ListItemContent>
                   <Typography level="title-sm">Главная</Typography>
+                </ListItemContent>
+              </ListItemButton>
+            </ListItem>
+          </Link>
+
+          <Link to="/files">
+            <ListItem>
+              <ListItemButton selected={location.pathname === "/files"}>
+                <FileIcon />
+                <ListItemContent>
+                  <Typography level="title-sm">Файлы</Typography>
                 </ListItemContent>
               </ListItemButton>
             </ListItem>

@@ -9,6 +9,7 @@ import MainPage from "./Main";
 import ProfilePage from "./Profile";
 import RequestsPage from "./Requests";
 import UsersPage from "./Users";
+import FilePage from "./Files"
 
 const RouterComponent = observer(() => {
   const authContext = useAuthStore();
@@ -29,6 +30,7 @@ const RouterComponent = observer(() => {
         <>
           <Route path="/" element={<MainPage />} />
           <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/files" element={<FilePage />} />
 
           {authContext.getRole === "ROLE_ADMIN" && (
             <>
